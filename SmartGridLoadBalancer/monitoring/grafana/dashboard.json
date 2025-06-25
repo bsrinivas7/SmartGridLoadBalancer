@@ -1,0 +1,11 @@
+{
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Substation Load",
+      "targets": [{"expr": "current_load", "legendFormat": "{{instance}}"}],
+      "gridPos": {"h": 8, "w": 12}
+    }
+  ],
+  "title": "Smart Grid Dashboard"
+}
