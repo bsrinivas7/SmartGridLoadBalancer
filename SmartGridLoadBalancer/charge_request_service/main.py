@@ -8,11 +8,11 @@ LOAD_BALANCER_URL = os.getenv('LOAD_BALANCER_URL', 'http://load_balancer:5000')
 @app.route('/charge', methods=['POST'])
 def charge_request():
     try:
-        # Get least loaded substation from load balancer
+        # Get the least loaded substation from load balancer
         response = requests.get(f"{LOAD_BALANCER_URL}/get_substation")
         substation_url = response.json()['substation_url']
 
-        # Forward request to substation
+        # Forwarding request to the substation
         charge_response = requests.post(
             f"{substation_url}/charge",
             json=request.json,
