@@ -10,6 +10,6 @@ def simulate_ev():
         "amount": random.randint(5, 20)
     })
 
-# Simulate rush hour (100 requests)
+# Simulating the rush hour (100 requests)
 for _ in range(100):
     simulate_ev()
