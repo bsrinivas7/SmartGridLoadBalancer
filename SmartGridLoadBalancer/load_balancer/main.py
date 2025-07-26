@@ -14,7 +14,7 @@ def poll_substations():
         for host in substation_hosts:
             try:
                 response = requests.get(f'http://{host}/metrics')
-                # Parse current_load metric
+                # Parsing current load metric
                 for line in response.text.split('\n'):
                     if line.startswith('current_load '):
                         with lock:
